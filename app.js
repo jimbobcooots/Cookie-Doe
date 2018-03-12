@@ -5,7 +5,7 @@ var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3
 var FirstandPike = {
   minCust: 23,
   maxCust: 65,
-  AvgCkSale: 6.3,
+  avgCkSale: 6.3,
   dailySales: function (min, max) {
     var cookieNums = [];
     min = this.minCust;
@@ -27,7 +27,7 @@ var FirstandPike = {
 var Seatac = {
   minCust: 3,
   maxCust: 24,
-  AvgCkSale: 1.2,
+  avgCkSale: 1.2,
   dailySales: function (min, max) {
     var cookieNums = [];
     min = this.minCust;
@@ -49,7 +49,7 @@ var Seatac = {
 var SeattleCenter = {
   minCust: 11,
   maxCust: 38,
-  AvgCkSale: 3.7,
+  avgCkSale: 3.7,
   dailySales: function (min, max) {
     var cookieNums = [];
     min = this.minCust;
@@ -72,7 +72,7 @@ var SeattleCenter = {
 var CapHill = {
   minCust: 20,
   maxCust: 38,
-  AvgCkSale: 2.3,
+  avgCkSale: 2.3,
   dailySales: function (min, max) {
     var cookieNums = [];
     min = this.minCust;
