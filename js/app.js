@@ -2,17 +2,34 @@
 
 var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var cookieSalesArray = [];
-var salesTotal = 0;
-
 var table = document.getElementById('sales-table');
+
+function makeHoursHeader() {
+  var locationHeader = document.createElement('th');
+  locationHeader.textContent = 'Location';
+  table.appendChild(locationHeader);
+  
+  for (var i = 0; i < hour.length; i++) {
+    var thElement = document.createElement('th');
+    thElement.textContent = hour[i];
+    table.appendChild(thElement);
+  }
+
+  var totalsHeader = document.createElement('th');
+  totalsHeader.textContent = 'Total';
+  table.appendChild(totalsHeader);
+}
+
+makeHoursHeader();
 
 function cookieShop(location, minCust, maxCust, avgCkSale) {
   this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCkSale = avgCkSale;
-  cookieSalesArray.push(this);
+  this.cookieSalesArray = [];
+  this.salesTotal = 0;
+  this.cookieSalesArray.push(this);
 }
 
 cookieShop.prototype.render = function () {
@@ -36,36 +53,30 @@ cookieShop.prototype.render = function () {
     
     var cookieNum = Math.round(randomCustNum*avg);
     // console.log(cookieNum);
-    cookieSalesArray.push(cookieNum);
+    this.cookieSalesArray.push(cookieNum);
     //we are pushing a value into our global var which = cookieSalesArray
    
+    this.salesTotal += cookieNum;
+
     var rowElement = document.createElement('td');
     rowElement.textContent = cookieNum;
     trElement.appendChild(rowElement);
     //we want to append the cookieNum (rand number) <td> to the trElement
   }
+    var trTotal = document.createElement('td')
+    trTotal.textContent = this.salesTotal;
+    trElement.appendChild(trTotal);
 
     table.appendChild(trElement);
 }
 
-var Alki = new cookieShop('Alki', 20, 40, 2);
-console.log(Alki);
-
-function makeHoursHeader() {
-  var locationHeader = document.createElement('th');
-  locationHeader.textContent = 'Location';
-  table.appendChild(locationHeader);
-  
-  for (var i = 0; i < hour.length; i++) {
-    var thElement = document.createElement('th');
-    thElement.textContent = hour[i];
-    table.appendChild(thElement);
-  }
-}
-
-makeHoursHeader();
-
+var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
+var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
+var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
+var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3); 
 Alki.render();
+
+
 
 
 /*function (minCust, maxCust, avg) <-- input
