@@ -2,7 +2,21 @@
 
 var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-var FirstAndPike = {
+function cookieShop(location, minCust, maxCust, avgCkSales) {
+  this.location = location;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCkSales = avgCkSales;
+}
+
+cookieShop.prototype.render = function () {
+  var trElement = document.createElement('tr');
+  var thElement = document.createElement('th');
+  thElement.textContent = hour[i];
+  trElement.appendChild(trElement);
+};
+
+/*var FirstAndPike = {
   minCust: 23,
   maxCust: 65,
   avgCkSale: 6.3,
@@ -177,7 +191,7 @@ var Alki = {
 
 Alki.dailySales();
 Alki.cookiesPerHour;
-
+*/
 
 
 
