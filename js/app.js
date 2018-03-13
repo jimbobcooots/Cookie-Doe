@@ -1,17 +1,62 @@
 'use strict';
 
-var hour = [' ', '6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-function cookieShop(location, minCust, maxCust, avgCkSales) {
-  this.locat = location;
+var cookieSalesArray = [];
+var salesTotal = 0;
+
+var table = document.getElementById('sales-table');
+
+function cookieShop(location, minCust, maxCust, avgCkSale) {
+  this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
-  this.avgCkSales = avgCkSales;
+  this.avgCkSale = avgCkSale;
+  cookieSalesArray.push(this);
 }
 
-function makeHoursHeader() {
+cookieShop.prototype.render = function () {
+  //we want our function to push sales at each hour into our cookieSalesArray
+  var min = this.minCust;
+  var max = this.maxCust;
+  
+  var trElement = document.createElement('tr');
+  var trLocation = document.createElement('td');
+  trLocation.textContent = this.location;
+  trElement.appendChild(trLocation);
+ 
+  //creating the table row that we will input our location and sales data at each hour
+
   for (var i = 0; i < hour.length; i++) {
-    var table = document.getElementById('sales-table');
+    var randomCustNum = Math.floor(Math.random() * (max - min + 1) + min);
+    
+    //for loop is iterating through the hours array, and at each index returning a random integer
+
+    var avg = this.avgCkSale;
+    
+    var cookieNum = Math.round(randomCustNum*avg);
+    // console.log(cookieNum);
+    cookieSalesArray.push(cookieNum);
+    //we are pushing a value into our global var which = cookieSalesArray
+   
+    var rowElement = document.createElement('td');
+    rowElement.textContent = cookieNum;
+    trElement.appendChild(rowElement);
+    //we want to append the cookieNum (rand number) <td> to the trElement
+  }
+
+    table.appendChild(trElement);
+}
+
+var Alki = new cookieShop('Alki', 20, 40, 2);
+console.log(Alki);
+
+function makeHoursHeader() {
+  var locationHeader = document.createElement('th');
+  locationHeader.textContent = 'Location';
+  table.appendChild(locationHeader);
+  
+  for (var i = 0; i < hour.length; i++) {
     var thElement = document.createElement('th');
     thElement.textContent = hour[i];
     table.appendChild(thElement);
@@ -20,9 +65,14 @@ function makeHoursHeader() {
 
 makeHoursHeader();
 
+Alki.render();
+
+
 /*function (minCust, maxCust, avg) <-- input
   we want our output to be:
-  
+  a row beginning with the name of the location
+
+  a row with a location, and subsequent 14 outputs of average cookies sold per hour
 */
 /*var FirstAndPike = {
   minCust: 23,
