@@ -1,21 +1,29 @@
 'use strict';
 
-var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var hour = [' ', '6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 function cookieShop(location, minCust, maxCust, avgCkSales) {
-  this.location = location;
+  this.locat = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCkSales = avgCkSales;
 }
 
-cookieShop.prototype.render = function () {
-  var trElement = document.createElement('tr');
-  var thElement = document.createElement('th');
-  thElement.textContent = hour[i];
-  trElement.appendChild(trElement);
-};
+function makeHoursHeader() {
+  for (var i = 0; i < hour.length; i++) {
+    var table = document.getElementById('sales-table');
+    var thElement = document.createElement('th');
+    thElement.textContent = hour[i];
+    table.appendChild(thElement);
+  }
+}
 
+makeHoursHeader();
+
+/*function (minCust, maxCust, avg) <-- input
+  we want our output to be:
+  
+*/
 /*var FirstAndPike = {
   minCust: 23,
   maxCust: 65,
