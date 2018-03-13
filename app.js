@@ -6,10 +6,11 @@ var FirstandPike = {
   minCust: 23,
   maxCust: 65,
   avgCkSale: 6.3,
-  dailySales: function (min, max) {
-    var cookieNums = [];
-    min = this.minCust;
-    max = this.maxCust;
+  cookieNums:[],
+  totalCookies: 0,
+  dailySales: function () {
+    var min = this.minCust;
+    var max = this.maxCust;
     
     for (var i = 0; i < 15; i++) {
       var randomCustNum = Math.floor(Math.random() * (max- min + 1) + min);
@@ -17,10 +18,10 @@ var FirstandPike = {
       var avg = this.avgCkSale;
       
       var cookieNum = Math.round(randomCustNum*avg);
-      cookieNums.push(cookieNum);
+      this.cookieNums[i] = cookieNum;
+
+      this.totalCookies = this.totalCookies + cookieNum;
     }
-    
-    return cookieNums;
   }
 };
 
@@ -28,10 +29,11 @@ var Seatac = {
   minCust: 3,
   maxCust: 24,
   avgCkSale: 1.2,
-  dailySales: function (min, max) {
-    var cookieNums = [];
-    min = this.minCust;
-    max = this.maxCust;
+  cookieNums:[],
+  totalCookies: 0,
+  dailySales: function () {
+    var min = this.minCust;
+    var max = this.maxCust;
     
     for (var i = 0; i < 15; i++) {
       var randomCustNum = Math.floor(Math.random() * (max- min + 1) + min);
@@ -39,10 +41,10 @@ var Seatac = {
       var avg = this.avgCkSale;
       
       var cookieNum = Math.round(randomCustNum*avg);
-      cookieNums.push(cookieNum);
+      this.cookieNums[i] = cookieNum;
+
+      this.totalCookies = this.totalCookies + cookieNum;
     }
-    
-    return cookieNums;
   }
 };
 
@@ -50,10 +52,11 @@ var SeattleCenter = {
   minCust: 11,
   maxCust: 38,
   avgCkSale: 3.7,
-  dailySales: function (min, max) {
-    var cookieNums = [];
-    min = this.minCust;
-    max = this.maxCust;
+  cookieNums:[],
+  totalCookies: 0,
+  dailySales: function () {
+    var min = this.minCust;
+    var max = this.maxCust;
     
     for (var i = 0; i < 15; i++) {
       var randomCustNum = Math.floor(Math.random() * (max- min + 1) + min);
@@ -61,10 +64,10 @@ var SeattleCenter = {
       var avg = this.avgCkSale;
       
       var cookieNum = Math.round(randomCustNum*avg);
-      cookieNums.push(cookieNum);
+      this.cookieNums[i] = cookieNum;
+
+      this.totalCookies = this.totalCookies + cookieNum;
     }
-    
-    return cookieNums;
   }
 };
 
@@ -73,10 +76,11 @@ var CapHill = {
   minCust: 20,
   maxCust: 38,
   avgCkSale: 2.3,
-  dailySales: function (min, max) {
-    var cookieNums = [];
-    min = this.minCust;
-    max = this.maxCust;
+  cookieNums:[],
+  totalCookies: 0,
+  dailySales: function () {
+    var min = this.minCust;
+    var max = this.maxCust;
     
     for (var i = 0; i < 15; i++) {
       var randomCustNum = Math.floor(Math.random() * (max- min + 1) + min);
@@ -84,10 +88,10 @@ var CapHill = {
       var avg = this.avgCkSale;
       
       var cookieNum = Math.round(randomCustNum*avg);
-      cookieNums.push(cookieNum);
+      this.cookieNums[i] = cookieNum;
+
+      this.totalCookies = this.totalCookies + cookieNum;
     }
-    
-    return cookieNums;
   }
 };
 
@@ -95,10 +99,11 @@ var Alki = {
   minCust: 2,
   maxCust: 16,
   avgCkSale: 4.6,
-  dailySales: function (min, max) {
-    var cookieNums = [];
-    min = this.minCust;
-    max = this.maxCust;
+  cookieNums:[],
+  totalCookies: 0,
+  dailySales: function () {
+    var min = this.minCust;
+    var max = this.maxCust;
     
     for (var i = 0; i < 15; i++) {
       var randomCustNum = Math.floor(Math.random() * (max- min + 1) + min);
@@ -106,10 +111,10 @@ var Alki = {
       var avg = this.avgCkSale;
       
       var cookieNum = Math.round(randomCustNum*avg);
-      cookieNums.push(cookieNum);
+      this.cookieNums[i] = cookieNum;
+
+      this.totalCookies = this.totalCookies + cookieNum;
     }
-    
-    return cookieNums;
   }
 };
 
