@@ -4,30 +4,8 @@ var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3
 
 ////CREATE TABLE AND THEAD ELEMENTS
 var table = document.getElementById('sales-table');
-var tableHeader = document.createElement('thead');
 var shopArray = [];
 var shopForm = document.getElementById('shop-form');
-////FUNCTION TO MAKE THE HEADER ROW OF HOURS
-function makeHoursHeader() {
-  var locationData = document.createElement('th');
-  locationData.textContent = 'Location';
-  
-  var headerRow = document.createElement('tr');
-  headerRow.appendChild(locationData);
- //append the th to the tr 
-  for (var i = 0; i < hour.length; i++) {
-    var thElement = document.createElement('th');
-    thElement.textContent = hour[i];
-    headerRow.appendChild(thElement);
-  }
-//append tr to thead
-  var totalsHeader = document.createElement('th');
-  totalsHeader.textContent = 'Totals';
-  headerRow.appendChild(totalsHeader);
-  
-  tableHeader.appendChild(headerRow);
-  table.appendChild(tableHeader);
-}
 
 ////CONSTRUCTOR FUNCTION FOR TABLE
 function cookieShop(location, minCust, maxCust, avgCkSale) {
@@ -55,15 +33,12 @@ cookieShop.prototype.render = function() {
 
   for (var i = 0; i < hour.length; i++) {
     var randomCustNum = Math.floor(Math.random() * (max - min + 1) + min);
-    
-    //for loop is iterating through the hours array, and at each index returning a random integer
-
     var avg = this.avgCkSale;
-    
     var cookieNum = Math.round(randomCustNum*avg);
     // console.log(cookieNum);
+    
     this.salesArray.push(cookieNum);
-    //we are pushing a value into our global var which = shopArray
+    //we are pushing a value into constructor array
    
     this.salesTotal += cookieNum;
 
@@ -83,6 +58,27 @@ new cookieShop('First and Pike', 23, 65, 6.3);
 new cookieShop('Seatac', 3, 24, 1.2);
 new cookieShop('Seattle Center', 11, 38, 3.7);
 new cookieShop('Alki', 2, 16, 4.6); 
+
+////FUNCTION TO MAKE THE HEADER ROW OF HOURS
+function makeHoursHeader() {
+  var headerRow = document.createElement('tr');
+  
+  var locationData = document.createElement('th');
+  locationData.textContent = 'Location';
+  headerRow.appendChild(locationData);
+
+  for (var i = 0; i < hour.length; i++) {
+    var thElement = document.createElement('th');
+    thElement.textContent = hour[i];
+    headerRow.appendChild(thElement);
+  }
+
+  var totalsHeader = document.createElement('th');
+  totalsHeader.textContent = 'Totals';
+  headerRow.appendChild(totalsHeader);
+  
+  table.appendChild(headerRow);
+}
 
 //FUNCTION TO RENDER ALL SHOPS
 function renderShops() {
@@ -106,6 +102,7 @@ function addShop(event) {
 
   table.innerHTML = ''; // we are now selecting our global 'table' variable from the top of our page and clearing its contents
 
+  makeHoursHeader();
   renderShops();
 }
 
