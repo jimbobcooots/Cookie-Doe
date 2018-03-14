@@ -41,6 +41,7 @@ cookieShop.prototype.render = function() {
     //we are pushing a value into constructor array
    
     this.salesTotal += cookieNum;
+    //pushing the shop into our global var
 
   var rowElement = document.createElement('td');
   rowElement.textContent = cookieNum;
@@ -58,6 +59,24 @@ new cookieShop('First and Pike', 23, 65, 6.3);
 new cookieShop('Seatac', 3, 24, 1.2);
 new cookieShop('Seattle Center', 11, 38, 3.7);
 new cookieShop('Alki', 2, 16, 4.6); 
+
+//TABLE FOOTER WITH HOURLY SALES TOTALS
+
+// cookieShop.prototype = function footerTotals() {
+//   var sum = 0;
+
+//   for (var i in this.salesArray) {
+
+//   }
+
+//   var tdElement = document.createElement('td');
+//   tdElement.textcontent = sum;
+//   var footerRow = document.createElement('tr')
+//   var footer = document.createElement('tfoot');
+
+// };
+
+
 
 ////FUNCTION TO MAKE THE HEADER ROW OF HOURS
 function makeHoursHeader() {
