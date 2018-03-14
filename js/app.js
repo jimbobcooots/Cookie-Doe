@@ -22,6 +22,11 @@ function makeHoursHeader() {
 
 makeHoursHeader();
 
+var FirstAndPike = new cookieShop('First and Pike', 23, 65, 6.3);
+var Seatac = new cookieShop('Seatac', 3, 24, 1.2);
+var SeattleCenter = new cookieShop('Seattle Center', 11, 38, 3.7);
+var Alki = new cookieShop('Alki', 2, 16, 4.6); 
+
 function cookieShop(location, minCust, maxCust, avgCkSale) {
   this.location = location;
   this.minCust = minCust;
@@ -62,20 +67,39 @@ cookieShop.prototype.render = function () {
     rowElement.textContent = cookieNum;
     trElement.appendChild(rowElement);
     //we want to append the cookieNum (rand number) <td> to the trElement
+
+    var hourlyTotalRow = document.createElement('tfoot')
+    var hourTotal = 0;
+
+    for (var j = 0; j < 4; j++) {
+      //we want to push the totals of each hour to hourlyTotalRow
+      //how do we get the totals of each row?
+      //we want to get the index of sales on each row 
+      var shop1 =  FirstAndPike.cookieSalesArray[i];
+      var shop2 = Seatac.cookieSalesArray[i];
+      var shop3 = SeattleCenter.cookieSalesArray[i];
+      var shop4 = Alki.cookieSalesArray[i];
+    }
+
+    hourTotal += (shop1 + shop2 + shop3 + shop4);
+
+    var footerData = document.createElement('td');
+    footerData.textContent = hourTotal;
+    hourlyTotalRow.appendChild(footerData);
   }
     var trTotal = document.createElement('td')
     trTotal.textContent = this.salesTotal;
     trElement.appendChild(trTotal);
 
     table.appendChild(trElement);
+    table.appendChild(hourlyTotalRow);
 }
 
-var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
-var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
-var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3);
-var FirstAndPike = new cookieShop('FirstAndPike', 23, 65, 6.3); 
-Alki.render();
 
+FirstAndPike.render();
+Seatac.render();
+SeattleCenter.render();
+Alki.render();
 
 
 
