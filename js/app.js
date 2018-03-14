@@ -67,9 +67,9 @@ cookieShop.prototype.render = function () {
     rowElement.textContent = cookieNum;
     trElement.appendChild(rowElement);
     //we want to append the cookieNum (rand number) <td> to the trElement
-
-    var hourlyTotalRow = document.createElement('tfoot')
-    var hourTotal = 0;
+  }
+    // var hourlyTotalRow = document.createElement('tfoot')
+    // var hourTotal = 0;
 
   //   for (var j = 0; j < 4; j++) {
   //     //we want to push the totals of each hour to hourlyTotalRow
