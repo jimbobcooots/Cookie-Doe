@@ -25,13 +25,8 @@ function makeHoursHeader() {
   tableHeader.appendChild(headerRow);
   table.appendChild(tableHeader);
 }
-//append thead to table
-makeHoursHeader();
 
-var FirstAndPike = new cookieShop('First and Pike', 23, 65, 6.3);
-var Seatac = new cookieShop('Seatac', 3, 24, 1.2);
-var SeattleCenter = new cookieShop('Seattle Center', 11, 38, 3.7);
-var Alki = new cookieShop('Alki', 2, 16, 4.6); 
+makeHoursHeader();
 
 function cookieShop(location, minCust, maxCust, avgCkSale) {
   this.location = location;
@@ -99,8 +94,12 @@ cookieShop.prototype.render = function () {
 
     table.appendChild(trElement);
     // table.appendChild(hourlyTotalRow);
-}
+};
 
+var FirstAndPike = new cookieShop('First and Pike', 23, 65, 6.3);
+var Seatac = new cookieShop('Seatac', 3, 24, 1.2);
+var SeattleCenter = new cookieShop('Seattle Center', 11, 38, 3.7);
+var Alki = new cookieShop('Alki', 2, 16, 4.6); 
 
 FirstAndPike.render();
 Seatac.render();
