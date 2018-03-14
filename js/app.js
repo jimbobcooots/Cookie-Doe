@@ -1,25 +1,31 @@
 'use strict';
 
 var hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
+//create a thead element
 var table = document.getElementById('sales-table');
+var tableHeader = document.createElement('thead');
 
 function makeHoursHeader() {
-  var locationHeader = document.createElement('th');
-  locationHeader.textContent = 'Location';
-  table.appendChild(locationHeader);
+  var locationData = document.createElement('th');
+  locationData.textContent = 'Location';
   
+  var headerRow = document.createElement('tr');
+  headerRow.appendChild(locationData);
+ //append the th to the tr 
   for (var i = 0; i < hour.length; i++) {
     var thElement = document.createElement('th');
     thElement.textContent = hour[i];
-    table.appendChild(thElement);
+    headerRow.appendChild(thElement);
   }
-
+//append tr to thead
   var totalsHeader = document.createElement('th');
-  totalsHeader.textContent = 'Total';
-  table.appendChild(totalsHeader);
+  totalsHeader.textContent = 'Totals';
+  headerRow.appendChild(totalsHeader);
+  
+  tableHeader.appendChild(headerRow);
+  table.appendChild(tableHeader);
 }
-
+//append thead to table
 makeHoursHeader();
 
 var FirstAndPike = new cookieShop('First and Pike', 23, 65, 6.3);
