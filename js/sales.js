@@ -76,8 +76,6 @@ new cookieShop('Alki', 2, 16, 4.6);
 
 // };
 
-
-
 ////FUNCTION TO MAKE THE HEADER ROW OF HOURS
 function makeHoursHeader() {
   var headerRow = document.createElement('tr');
@@ -116,7 +114,7 @@ function addShop(event) {
   var newAvg = parseInt(event.target.avgCookies.value);
   //these are the values for what we want in our form
 
-  var newShop = new cookieShop(newLocation, newMin, newMax, newAvg);
+  new cookieShop(newLocation, newMin, newMax, newAvg);
   //variable for our new input and specifying the variables for each value
 
   table.innerHTML = ''; // we are now selecting our global 'table' variable from the top of our page and clearing its contents
