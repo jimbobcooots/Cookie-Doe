@@ -1,4 +1,42 @@
 body {
+  margin: 0;
+  border: 0;
+  top: 0;
+  padding: 0;
   background-image: url(/Users/noahisrael/codefellows/cookie-stand/assets/cookies2.jpg);
   background-size: 8%;
 }
+
+.nav-left {
+  /* font-family: 'IBM Plex Serif', serif; */
+  font-family: 'Playfair Display', serif;
+  background-color: #2fc8cb;
+  margin-top: -20px;
+  width: 50%;
+  height: 150px;
+  float: left;
+}
+
+.nav-right {
+  /* font-family: 'IBM Plex Serif', serif; */
+  font-family: 'Playfair Display', serif;
+  background-color: #2fc8cb;
+  margin-top: -20px;
+  width: 50%;
+  height: 150px;
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  position: absolute;
+}
+
+.nav-item-left {
+  text-align: center;
+}
+
+.nav-item-right {
+  text-align: center;
+}
+
