@@ -1,4 +1,73 @@
 body {
-  background-image: url(/Users/noahisrael/codefellows/cookie-stand/assets/cookie-background.jpg);
-  background-color: red;
+  margin: 0;
+  border: 0;
+  top: 0;
+  padding: 0;
+  background-color: #210f03;
+  background-size: 8%;
+  font-family: 'Playfair Display', serif;
 }
+
+nav {
+  background-color: #2fc8cb;
+  height: 3em;
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+/*   margin-left: 12em;
+  margin-right: 14em; */
+}
+
+nav a {
+  display: block;
+}
+
+.nav-left {
+  float: left;
+  margin-left: 13em;
+}
+
+.nav-right {
+  margin-right: 13em;
+}
+
+.nav-left li {
+  float: left;
+  margin-top: 1.3em;
+}
+
+.nav-right li {
+  float: right;
+  margin-top: 1.3em;
+}
+
+.nav-item a {
+  color: white;
+  display: block;
+  font-size: 16px;
+  margin-left: 4em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cookie-bite {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#heading {
+  position: relative;
+  color: white;
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+
