@@ -1,10 +1,10 @@
 body {
-  margin: 0;
-  border: 0;
-  top: 0;
-  padding: 0;
   background-color: #210f03;
   background-size: 8%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  top: 0;
   font-family: 'Playfair Display', serif;
 }
 
@@ -16,34 +16,29 @@ nav {
 
 nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
 /*   margin-left: 12em;
   margin-right: 14em; */
 }
 
-nav a {
-  display: block;
-}
-
 .nav-left {
-  float: left;
-  margin-left: 13em;
+  display: inline-block;
+  margin-left: 12em;
+  position: absolute;
 }
 
 .nav-right {
-  margin-right: 13em;
+  display: inline-block;
+  margin-left: 43em;
+  position: relative;
 }
 
 .nav-left li {
   float: left;
-  margin-top: 1.3em;
 }
 
 .nav-right li {
   float: right;
-  margin-top: 1.3em;
 }
 
 .nav-item a {
@@ -63,11 +58,52 @@ nav a {
 }
 
 #heading {
-  position: relative;
   color: white;
   font-family: 'Satisfy', cursive;
   font-size: 50px;
+  position: relative;
   text-align: center;
+}
+
+#section2 {
+  background-color: white;
+  margin-top: 100px;
+  height: 200px;
+}
+
+.recipe {
+  text-align: center;
+}
+
+.list-left {
+  color: white;
+  border-right: 1px dotted white;
+  display: inline-block;
+  font-family: 'Vidaloka';
+  list-style-type: cjk-ideographic;
+  margin-left: 25%;
+  padding-right: 35px;
+  position: absolute;
+  width: 250px;
+}
+
+.list-right {
+  color: white;
+  display: inline-block;
+  font-family: 'Vidaloka';
+  list-style-type: cjk-ideographic;
+  margin-left: 55%;
+  position: relative;
+  width: 250px;
+}
+
+.list-left li {
+  margin-bottom: 35px;
+  
+}
+
+.list-right li {
+  margin-bottom: 35px;
 }
 
 

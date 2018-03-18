@@ -45,12 +45,20 @@ label {
   padding: 5px;
 }
 
+form {
+  margin-left: 2em;
+  width: 95%;
+}
+
 button {
   background-color: white;
-  border-style: none;
+  border: 1px solid #0f7fbb;
+  box-shadow: 1px #c9d2d6;
+  color: #0f7fbb;
+  font-size: 12px;
   font-weight: bold;
-  height: 25px;
-  width: 100px;
+  height: 35px;
+  width: 110px;
   margin-left: 25px;
   padding-left: 5px;
 }
