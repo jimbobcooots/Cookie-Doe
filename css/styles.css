@@ -7,7 +7,6 @@ body {
 nav {
   background-color: #2fc8cb;
   height: 100px;
-  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -15,6 +14,7 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 nav ul {
@@ -40,12 +40,15 @@ nav li a {
 
 .cookie-bite {
   display: block;
+  height: 550px;
+  margin-bottom: -100px;
   margin-left: auto;
   margin-right: auto;
+  width: auto;
 }
 
 #scrollBtn {
-  background-color: #2fc8cb;
+  background-color: rgb(244, 127, 162);
   border: 2px dotted white;
   border-radius: 10px;
   bottom: 20px;
@@ -57,11 +60,12 @@ nav li a {
   padding: 15px;
   position: fixed;
   right: 30px;
+  text-shadow: 1px 2px #210f03;
   width: 150px;
   z-index: 99;
 }
 
-#myBtn:hover {
+#scrollBtn:hover {
     background-color: #2fc8cb;
 }
 
@@ -82,10 +86,12 @@ nav li a {
   background-color: #2fc8cb;
   border: 2px dotted white;
   display: block;
-  height: 400px;
+  height: 425px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   width: 600px;
+  z-index: 1;
 }
 
 .menu h2 {
@@ -102,6 +108,15 @@ nav li a {
   list-style-type: none;
   padding: 10px;
   text-align: center;
+}
+
+
+.salmon-list {
+  height: auto;
+  margin-left: -40px;
+  margin-top: 260px;
+  position: absolute;
+  width: 100px;
 }
 
 #section-two {
@@ -224,7 +239,6 @@ figcaption {
 }
 
 #section-five p {
-  border: 2px solid white;
   color: white;
   margin-top: -150px;
   margin-left: 300px;
@@ -246,6 +260,16 @@ figcaption {
 #section-five li a {
   color: white;
   text-decoration: none;
+}
+
+.salmon-large {
+  bottom: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: 150px;
+  height: auto;
+  position: relative;
+  width: 300px;
 }
 
 
