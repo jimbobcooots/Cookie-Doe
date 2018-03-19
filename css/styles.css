@@ -44,6 +44,27 @@ nav li a {
   margin-right: auto;
 }
 
+#scrollBtn {
+  background-color: #2fc8cb;
+  border: 2px dotted white;
+  border-radius: 10px;
+  bottom: 20px;
+  color: white;
+  display: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  position: fixed;
+  right: 30px;
+  width: 150px;
+  z-index: 99;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
 #section-one {
   margin-bottom: 100px;
 }
@@ -84,5 +105,61 @@ nav li a {
 }
 
 #section-two {
+  background-size: 100%;
   margin-bottom: 100px;
 }
+
+.family {
+  display: block;
+  height: auto;
+  margin-left: 20px;
+  position: absolute;
+  width: 42%;
+}
+
+.salmon-cutter {
+  display: block;
+  height: 160px;
+  margin-left: 45%;
+  position: relative;
+  top: 160px;
+  width: 225px;
+}
+
+.frosted-cookie {
+  display: block;
+  height: 150px;
+  margin-left: 45%;
+  position: relative;
+  top: 190px;
+  width: 225px; 
+}
+
+.our-story {
+  border-color: white;
+  border-style: double;
+  border-width: 10px;
+  bottom: 150px;
+  color: white;
+  float: right;
+  height: 320px;
+  line-height: 1.8;
+  overflow-y: scroll;
+  position: relative;
+  right: 20px;
+  width: 500px;
+}
+
+.our-story h2 {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.our-story p {
+  margin-top: -10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
