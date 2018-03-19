@@ -22,4 +22,16 @@ function topFunction() {
   //when the button is pressed we scroll to the 0px point of the body
 }
 
+function googleMap () {
+  var mapOptions = {
+    center: new googleMap.maps.LatLng(51.5, -.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  }
+
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+googleMap();
+
 
