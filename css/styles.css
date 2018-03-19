@@ -1,6 +1,5 @@
 body {
   background-color: #210f03;
-  background-size: 8%;
   margin: 0;
   font-family: 'Playfair Display', serif;
 }
@@ -8,7 +7,7 @@ body {
 nav {
   background-color: #2fc8cb;
   height: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   width: 100%;
 }
 
@@ -19,24 +18,24 @@ nav {
 }
 
 nav ul {
-  margin-left: 150px;
+  margin-left: 190px;
   width: 100%;
 }
 
 nav ul li {
   display: inline-block;
-  margin-right: 170px;
+  margin-right: 200px;
   position: relative;
   top: -50px;
-}
-
-.our-cookies {
-  margin-right: 300px;
 }
 
 nav li a {
   color: white;
   text-decoration: none;
+}
+
+.our-cookies {
+  margin-right: 300px;
 }
 
 .cookie-bite {
@@ -45,53 +44,45 @@ nav li a {
   margin-right: auto;
 }
 
+#section-one {
+  margin-bottom: 100px;
+}
+
 #heading {
   color: white;
   font-family: 'Satisfy', cursive;
   font-size: 50px;
+  margin-top: 50px;
   position: relative;
   text-align: center;
 }
 
-#section2 {
-  background-color: white;
-  margin-top: 100px;
-  height: 200px;
+.menu {
+  background-color: #2fc8cb;
+  border: 2px dotted white;
+  display: block;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
 }
 
-.recipe {
+.menu h2 {
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
   text-align: center;
 }
 
-.list-left {
+.menu ul {
   color: white;
-  border-right: 1px dotted white;
-  display: inline-block;
-  font-family: 'Vidaloka';
-  list-style-type: cjk-ideographic;
-  margin-left: 25%;
-  padding-right: 35px;
-  position: absolute;
-  width: 250px;
+  font-size: 14px;
+  line-height: 2;
+  list-style-type: none;
+  padding: 10px;
+  text-align: center;
 }
 
-.list-right {
-  color: white;
-  display: inline-block;
-  font-family: 'Vidaloka';
-  list-style-type: cjk-ideographic;
-  margin-left: 55%;
-  position: relative;
-  width: 250px;
+#section-two {
+  margin-bottom: 100px;
 }
-
-.list-left li {
-  margin-bottom: 35px;
-  
-}
-
-.list-right li {
-  margin-bottom: 35px;
-}
-
-
