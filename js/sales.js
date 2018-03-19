@@ -78,7 +78,16 @@ function makeFooterTotals() {
   var tableData = document.createElement('td');
   tableData.textContent = sum;
   footerRow.appendChild(tableData);
+
+ 
   }
+  var total = 0;
+  for (var k in sum) {
+    total += sum[k];
+  }
+  var totes = document.createElement('td');
+  totes.textContent = total;
+  footerRow.appendChild(totes);
   table.appendChild(footerRow);
 }
 

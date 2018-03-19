@@ -1,73 +1,278 @@
 body {
-  margin: 0;
-  border: 0;
-  top: 0;
-  padding: 0;
   background-color: #210f03;
-  background-size: 8%;
+  margin: 0;
   font-family: 'Playfair Display', serif;
 }
 
 nav {
   background-color: #2fc8cb;
-  height: 3em;
+  height: 100px;
   width: 100%;
 }
 
+.nav-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-/*   margin-left: 12em;
-  margin-right: 14em; */
+  margin-left: 190px;
+  width: 100%;
 }
 
-nav a {
-  display: block;
+nav ul li {
+  display: inline-block;
+  margin-right: 200px;
+  position: relative;
+  top: -50px;
 }
 
-.nav-left {
-  float: left;
-  margin-left: 13em;
-}
-
-.nav-right {
-  margin-right: 13em;
-}
-
-.nav-left li {
-  float: left;
-  margin-top: 1.3em;
-}
-
-.nav-right li {
-  float: right;
-  margin-top: 1.3em;
-}
-
-.nav-item a {
+nav li a {
   color: white;
-  display: block;
-  font-size: 16px;
-  margin-left: 4em;
-  text-align: center;
   text-decoration: none;
+}
+
+.our-cookies {
+  margin-right: 300px;
 }
 
 .cookie-bite {
   display: block;
+  height: 550px;
+  margin-bottom: -100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  width: auto;
+}
+
+#scrollBtn {
+  background-color: rgb(244, 127, 162);
+  border: 2px dotted white;
+  border-radius: 10px;
+  bottom: 20px;
+  color: white;
+  display: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  position: fixed;
+  right: 30px;
+  text-shadow: 1px 2px #210f03;
+  width: 150px;
+  z-index: 99;
+}
+
+#scrollBtn:hover {
+    background-color: #2fc8cb;
+}
+
+#section-one {
+  margin-bottom: 100px;
 }
 
 #heading {
-  position: relative;
   color: white;
   font-family: 'Satisfy', cursive;
   font-size: 50px;
+  margin-top: 50px;
+  position: relative;
   text-align: center;
 }
+
+.menu {
+  background-color: #2fc8cb;
+  border: 2px dotted white;
+  display: block;
+  height: 425px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 600px;
+  z-index: 1;
+}
+
+.menu h2 {
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.menu ul {
+  color: white;
+  font-size: 14px;
+  line-height: 2;
+  list-style-type: none;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.salmon-list {
+  height: auto;
+  margin-left: -40px;
+  margin-top: 260px;
+  position: absolute;
+  width: 100px;
+}
+
+#section-two {
+  background-size: 100%;
+  margin-bottom: 100px;
+}
+
+.container {
+  bottom: 100px;
+  position: relative;
+}
+
+.family {
+  border: 5px solid white;
+  display: block;
+  height: auto;
+  margin-left: 20px;
+  position: absolute;
+  width: 42%;
+}
+
+.salmon-cutter {
+  border: 5px solid white;
+  display: block;
+  height: 175px;
+  margin-left: 44%;
+  position: relative;
+  top: 185px;
+  width: 225px;
+}
+
+.frosted-cookie {
+  border: 5px solid white;
+  display: block;
+  height: 155px;
+  margin-left: 44%;
+  position: relative;
+  top: 185px;
+  width: 225px; 
+}
+
+.our-story {
+  background-color: #210f03;
+  border: 5px solid white;
+  bottom: 165px;
+  color: white;
+  float: right;
+  height: 340px;
+  line-height: 1.8;
+  overflow-y: scroll;
+  position: relative;
+  right: 20px;
+  width: 35%;
+}
+
+.our-story h2 {
+  text-shadow: 2px 1px #210f03;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.our-story p {
+  margin-top: -10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#section-three {
+  background-color: #2fc8cb;
+  border: 2px dotted white;
+  height: 500px;
+  margin-bottom: 100px;
+}
+
+#section-four {
+  color: white;
+  left: 200px;
+  line-height: 2;
+  position: relative;
+  top: 50px;
+}
+
+.pike-place {
+  display: inline-block;
+  margin-left: 400px;
+  margin-top: -200px;
+  position: absolute;
+}
+
+.harrods {
+  display: inline-block;
+  margin-top: -200px;
+  margin-left: 800px;
+  position: relative;
+}
+
+figcaption {
+  margin-left: -10px;
+  padding: 10px;
+  text-align: center;
+}
+
+#section-four {
+  margin-bottom: 200px;
+}
+
+#section-five {
+  background-color: grey;
+  height: 300px;
+}
+
+.tee {
+  height: auto;
+  padding-left: 30px;
+  padding-top: 10px;
+  top: 20px;
+  position: relative;
+  width: 250px;
+}
+
+#section-five p {
+  color: white;
+  margin-top: -150px;
+  margin-left: 300px;
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+}
+
+#section-five ul {
+  color: white;
+  display: inline-block;
+  float: right;
+  line-height: 2;
+  list-style-type: none;
+  margin-top: -100px;
+  margin-right: 250px;
+}
+
+#section-five li a {
+  color: white;
+  text-decoration: none;
+}
+
+.salmon-large {
+  bottom: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: 150px;
+  height: auto;
+  position: relative;
+  width: 300px;
+}
+
+
+
 
 

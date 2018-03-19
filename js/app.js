@@ -1,7 +1,7 @@
 'use strict';
 //This function will show the button when the user scrolls down 20px from the top of the doc
 
-window.onscroll = function () {scrollFunction()}; 
+window.onscroll = function() {scrollFunction()}; 
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -21,4 +21,17 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
   //when the button is pressed we scroll to the 0px point of the body
 }
+
+function googleMap () {
+  var mapOptions = {
+    center: new googleMap.maps.LatLng(51.5, -.12),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  }
+
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
+googleMap();
+
 
